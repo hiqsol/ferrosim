@@ -1,8 +1,8 @@
 # Approach
 
-I am starting project from scratch.
+I am starting new project from scratch.
 I'm collecting my raw thoughts.md about the system to build.
-I want to start with high level overview.md of what has to be done.
+I want to start with concise high level overview.md of what has to be done.
 Don't inflate it, I want it short and clean.
 
 So I want to brainstorm with you:
