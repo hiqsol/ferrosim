@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package ferrosim.v1;
+
+service FleetSim {
+  rpc Execute(Command) returns (Result);
+}
+
+enum CommandKind {
+  COMMAND_KIND_UNSPECIFIED = 0;
+  COMMAND_KIND_SEND = 1;
+  COMMAND_KIND_HAUL = 2;
+  COMMAND_KIND_TAKE = 3;
+  COMMAND_KIND_GIVE = 4;
+  COMMAND_KIND_LOAD = 5;
+  COMMAND_KIND_PASS = 6;
+}
+
+message MoveParams {
+  string src = 1;
+  string dst = 2;
+  double expected_duration = 3;
+}
+
+message LiftParams {
+  double lifting_height = 1;
+}
+
+message Command {
+  string robot_id = 1;
+  CommandKind kind = 2;
+  double start_time = 3;
+  MoveParams move = 4;
+  LiftParams lift = 5;
+}
+
+message Result {
+  double finish_time = 1;
+  string error = 2;
+}
+

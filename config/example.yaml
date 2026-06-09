@@ -1,0 +1,32 @@
+durations:
+  send: {k: 1.0, b: 0.0}
+  haul: {k: 1.1, b: 0.25}
+  take: {k: 0.5, b: 1.0}
+  give: {k: 0.5, b: 1.0}
+  load: {k: 0.0, b: 2.0}
+  pass: {k: 0.0, b: 2.0}
+
+battery:
+  min_voltage: 18.0
+  max_voltage: 25.0
+  drain_rates:
+    idle: 0.001
+    moving: 0.01
+    lifting: 0.02
+
+robots:
+  - id: robot-1
+    position: node-a
+    status: ok
+    activity: idle
+    elevator: empty
+    voltage: 25.0
+    last_finish_time: 0.0
+  - id: robot-2
+    position: node-b
+    status: ok
+    activity: idle
+    elevator: loaded
+    voltage: 24.5
+    last_finish_time: 0.0
+
